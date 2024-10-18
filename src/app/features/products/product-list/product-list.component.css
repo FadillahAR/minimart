@@ -1,0 +1,68 @@
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 20px;
+  }
+  
+  .product-card {
+    width: 300px;
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  mat-card-image {
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  mat-card-header {
+    padding-bottom: 0;
+  }
+  
+  mat-card-title, mat-card-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  
+  mat-card-content p {
+    text-align: justify;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  mat-card-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+  }
+  
+  mat-card-actions button {
+    font-size: 0.875rem;
+  }
+
+  .delete-button {
+    background-color: #C62828; /* Merah tua */
+    color: white; /* Warna teks putih */
+  }
+  
+  .delete-button:hover {
+    background-color: #B71C1C; /* Merah lebih gelap saat hover */
+  }
+
+  .search-container {
+    flex: 1; /* Agar kontainer mengambil sisa ruang di toolbar */
+    display: flex;
+    justify-content: center; /* Memusatkan secara horizontal */
+  }
+  
+  .mat-form-field {
+    width: 300px; /* Atur lebar sesuai kebutuhan */
+  }
+  
+  

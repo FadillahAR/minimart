@@ -1,0 +1,30 @@
+<mat-toolbar color="primary">
+  <span class="spacer"></span>
+  <div class="search-container"> <!-- Tambahkan div pembungkus -->
+    <mat-form-field appearance="outline">
+      <mat-label>Cari Produk</mat-label>
+      <input matInput [(ngModel)]="searchTerm" placeholder="Ketik nama produk">
+    </mat-form-field>
+  </div>
+</mat-toolbar>
+
+<div class="product-list">
+  <mat-card *ngFor="let product of filteredProducts()" class="product-card">
+    <mat-card-header>
+      <mat-card-title>{{ product.title }}</mat-card-title>
+      <mat-card-subtitle>{{ product.price | currency }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <img mat-card-image src="https://via.placeholder.com/150" alt="{{ product.title }}">
+
+    <mat-card-content>
+      <p>{{ product.description }}</p>
+    </mat-card-content>
+
+    <mat-card-actions align="end">
+      <button mat-raised-button color="accent" (click)="goToDetail(product.id)">Detail</button>
+      <button mat-flat-button color="primary" [routerLink]="['/products/edit', product.id]">Edit</button>
+      <button mat-raised-button class="delete-button" (click)="deleteProduct(product.id)">Hapus</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

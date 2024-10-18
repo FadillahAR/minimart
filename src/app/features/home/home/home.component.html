@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="logout-container">
+      <button mat-raised-button color="warn" (click)="logout()">Logout</button>
+    </div>
+  
+    <h1 class="title">Minimart</h1>
+    <h2 class="welcome-message">{{ welcomeMessage }}</h2>
+  
+    <div class="home-container">
+      <mat-card class="menu-card">
+        <mat-card-title class="menu-title">Manajemen Produk</mat-card-title>
+        <mat-card-content>
+          <p>Kelola produk dengan melihat daftar produk yang tersedia.</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" [routerLink]="['/products/list']">Lihat Daftar Produk</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  
